@@ -55,8 +55,12 @@ return {
   },
 
   -- Configure require("lazy").setup() options
+  require("lazy").setup("plugins", {
+    install = { missing = true }, -- Ensure missing plugins install on startup
+  }),
+
   lazy = {
-    defaults = { lazy = true },
+    defaults = { lazy = false },
     performance = {
       rtp = {
         -- customize default disabled vim plugins
