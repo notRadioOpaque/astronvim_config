@@ -54,6 +54,18 @@ return {
     },
   },
 
+  require("lspconfig").tsserver.setup {
+    filetypes = {
+      "javascript",
+      "javascriptreact",
+      "javascript.jsx",
+      "typescript",
+      "typescriptreact",
+      "typescript.tsx",
+      "svelte",
+    },
+  },
+
   -- Configure require("lazy").setup() options
   require("lazy").setup("plugins", {
     install = { missing = true }, -- Ensure missing plugins install on startup
